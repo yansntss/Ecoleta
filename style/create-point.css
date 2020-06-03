@@ -125,7 +125,7 @@ form button{
     font-weight: bold;
     font-size: 16px;
 
-    border: 0;
+    border:0 ;
 
     margin-top:40px;
     
@@ -134,4 +134,57 @@ form button{
 
 form button:hover{
     background-color: #2fb86e;
+}
+
+
+/* ítens de coleta/ as 6 li */
+
+.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*para calcular 3 colunas em cada linha*/
+    gap:16px; /*para separar os 'li' do grid*/
+}
+
+.items-grid li{
+
+    background-color: #e9e6e6;
+    list-style: none; /*para tirar a bolinha do li*/
+
+    border:2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+   
+    /* nessa parte o flex direction: column esta mudando o padrao do justify-content: space-between; que antes era da esquerda para a direira e agora é de cima para baixo*/
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    text-align: center;
+
+    cursor: pointer; /*colocar a "maozinha" no item clicavel*/
+}
+
+.items-grid li span{
+    flex:1; /*para preencher o tamho sozinho*/
+
+    display:flex;
+    align-items: center;
+
+    color: var(--title-color);
+
+}
+
+/*pegue todos li que tenha a class selected*/
+.items-grid li.selected{
+    background-color: #e1faec;
+    border:2px solid #34cb79;
+
+}
+/* tirando o evento de pointer na imagem e no span detro do li*/
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
 }

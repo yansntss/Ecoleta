@@ -4,6 +4,9 @@
         console.log("mudei")
     })//arrow function */
 
+
+    /** Parte dos dados da entidade/ Formulario */
+
     function populateUFs(){
         const ufSelect = document.querySelector("select[name=uf]")
         
@@ -55,4 +58,65 @@
     document
         .querySelector("select[name=uf]")
         .addEventListener("change", getCities)
-            
+
+
+/** ítens de coleta/ as 6 li */
+
+//pegando todos os li
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+for (const item of itemsToCollect){
+    item.addEventListener("click", handleSelectedItem)
+}
+
+const collectedItems = document.querySelector("input[name=items]")
+
+
+let selectedItems = []
+
+
+function handleSelectedItem(event){
+
+    const itemLi = event.target
+    
+    //adicionar ou remorver uma class com js
+
+    //itemLi.classList.remove("selected") -> remove
+    //itemLi.classList.add("selected") -> add
+    //add ou remove
+    itemLi.classList.toggle("selected")
+
+
+    //joganddo o id do click na variavel itemId
+    const itemId = itemLi.dataset.id
+
+   
+
+    //verificar se existem items selecionados, se sim, pegar os items selecionado
+
+    const alreadySelected = selectedItems.findIndex(item =>{
+        const itemFound = item == itemId //isso sera true ou false
+        return itemFound
+    })
+
+    // se ja tiver selecionado, tirar da seleção
+
+    if(alreadySelected >=0 ){
+
+        const filteredItems = selectedItems.filter(item => {
+            const itemIsDifferent = item != itemId //false
+            return itemIsDifferent
+        })
+        selectedItems = filteredItems
+        
+    }else{
+        //se nao tiver selecionado, adicionar a seleção
+        selectedItems.push(itemId)
+    }
+
+
+    //atuallizar o campo escondido com os items selecionados
+
+    collectedItems.value = selectedItems
+}
+
