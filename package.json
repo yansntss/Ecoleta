@@ -1,0 +1,27 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "Projeto de um Marketplace de coleta de resíduos. Realizado no Next Level Week - Rocketseat",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yansntss/SemanaNLW.git"
+  },
+  "keywords": [],
+  "author": "Yansntss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yansntss/SemanaNLW/issues"
+  },
+  "homepage": "https://github.com/yansntss/SemanaNLW#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,1 @@
+Pasta que vai receber tudo que é publico (front)
