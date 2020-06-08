@@ -25,7 +25,7 @@ db.serialize(()=>{
 //         );
 //     `)
 
-//     // 2 insserir dados na tabela
+// //     // 2 insserir dados na tabela
 
 //     const query = `
 //     INSERT INTO places (
@@ -55,14 +55,14 @@ db.serialize(()=>{
 
 //      db.run(query, values, afterInsertData)
    
-    // 3 consultar os dados da tabela
-    // db.all(`SELECT name FROM places`, function(err, rows){
-    //     if(err){
-    //         return console.log(err)
-    //     }
-    //     console.log("aqui estao os seus resistros")
-    //     console.log(rows)
-    // })
+//     // 3 consultar os dados da tabela
+//     db.all(`SELECT name FROM places`, function(err, rows){
+//         if(err){
+//             return console.log(err)
+//         }
+//         console.log("aqui estao os seus resistros")
+//         console.log(rows)
+//     })
 
 
     // // 4 deletar dados da tabela
