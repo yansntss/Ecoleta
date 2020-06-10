@@ -105,7 +105,7 @@ server.post("/savepoint", (req, res) => {
         }
         console.log("cadastrado com sucesso")
         console.log(this)
-        return res.send("create-point.html", {saved: true})
+        return res.render("create-point.html", { saved: true })
     }
 
     db.run(query, values, afterInsertData)
