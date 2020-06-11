@@ -43,20 +43,46 @@
 @media (max-height:760px) {
     #page-home {
         background-position-y: 200px;
+        
+        
     }
+    
 }
-
+/*iphone 6/7/8 plus*/
 @media (max-Width: 580px){
      #page-create-point .items-grid{
         display: grid;
         grid-template-columns: 1fr 1fr; /*para calcular 2 colunas em cada linha*/
         gap:16px; /*para separar os 'li' do grid*/
-
+      
   }
-#page-home header a {
-    position: absolute;
-    bottom: 13px;
-    left: 50%;
-    transform: translateX(-44%);
-    text-align: center;}
+    body{
+        background-image: url("../assets/background-iphone7plus.svg") ;
+        color: rgb(192, 180, 206);
+    }
+
+    /* header{
+        background-image: url("../assets/logo2.svg");
+        display: flex;
+    } */
+
+    #page-home header a {
+        position: absolute;
+        bottom: 13px;
+        left: 50%;
+        transform: translateX(-44%);
+        text-align: center;
+        color: #c0b4ce;
+    }
+    #page-home main{
+        flex:0;
+        
+    }
+
+    #page-home main h1{
+        font-size: 48px;
+        padding: 50px;
+        color: #c0b4ce;
+    }
+   
 }
