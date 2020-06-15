@@ -13,11 +13,14 @@
 
 {% block content %}
 
-    <div class="content">
+    <div class="content"> 
 
         <header>
-            
-            <img src="/assets/logo.svg" alt="Logomarca">
+            {# remover a logo ao clicar #}
+            <img src="/assets/logo.svg" onclick= "this.parentNode.removeChild(this)" alt="Logomarca">
+           
+           <img src="/assets/modo-diurno.svg">
+           
             <a href="/create-point">Cadastre um ponto de coleta
                 <span></span>
             </a>

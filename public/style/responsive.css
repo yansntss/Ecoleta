@@ -74,6 +74,12 @@
         text-align: center;
         color: #c0b4ce;
     }
+
+    #page-home header img:nth-child(2){
+
+        width: 40px;
+        
+    }
     #page-home main{
         flex:0;
         
@@ -85,4 +91,9 @@
         color: #c0b4ce;
     }
    
+    #page-home main a{
+       background-color:rgb(1%, 42%, 20%);
+       max-width: 310px;
+    }
+
 }
